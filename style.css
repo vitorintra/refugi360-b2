@@ -1,0 +1,142 @@
+:root {
+  --blue: #2A55C5;
+  --white: #FFF;
+  --gray: #f1f1f1;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Roboto;
+  color: var(--white);
+}
+
+html, body {
+  height: 100vh;
+  width: 100vw;
+  font-size: 62.5%;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background: linear-gradient(248.33deg, #D0D0D0 0%, #2A55C5 0.01%, #181818 132.38%);
+}
+
+.section {
+  flex: 1;
+}
+
+.section.login-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 6rem 0;
+  align-items: center;
+  background: var(--blue);
+}
+
+.login-wrapper .title {
+  font-size: 4.8rem;
+  font-weight: bold;
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+.section.login-wrapper .login-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: min(36.3rem, 100%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5rem 4.5rem;
+  background: var(--white);
+  gap: 4rem;
+}
+
+.section.login-wrapper .login-container .form-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #121212;
+  font-weight: 400;
+}
+
+.section.login-wrapper .login-container .form-title span {
+
+  color: var(--blue);
+}
+
+.login-wrapper footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  color: var(--white);
+}
+
+.section.background-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+}
+
+.section.background-container img {
+  width: min(51.8rem, 100%);
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .section.background-container {
+    display: none;
+  }
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 3.8rem
+}
+
+#login-form button {
+  width: 100%;
+  border: none;
+  border-radius: 0.4rem;
+  background: var(--blue);
+  height: 5.6rem;
+  cursor: pointer;
+}
+
+#login-form .inputs-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+#login-form .inputs-wrapper input {
+  width: 100%;
+  border: none;
+  border-radius: 0.4rem .4rem 0 0;
+  border-bottom: 0.1rem solid var(--blue);
+  background: var(--gray);
+  height: 5.6rem;
+  padding: 0 1.6rem;
+  font-size: 1.6rem;
+  color: #121212;
+  outline: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+#login-form .inputs-wrapper input::placeholder {
+  color: var(--blue);
+}
+
+#login-form .inputs-wrapper input:focus {
+  background: var(--white);
+  transition: background-color 0.2s ease-in-out;
+}
